@@ -12,9 +12,8 @@ export const $SidebarContainer = styled.aside`
     height: 100%;
     align-items: center;
     background-color: #0d0d0d;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
     opacity: ${({isOpen})=> (isOpen ? "100%" : "0")};
-    /* display: ${(isOpen)=> (isOpen ? "grid" : "none")}; */
     z-index: 999;
 `
 

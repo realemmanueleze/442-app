@@ -4,10 +4,13 @@ import Sidebar from '../components/Sidebar'
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMobileMenu = ()=> {
+    setIsOpen(!isOpen)
+  }
   return (
     <>
-       <Sidebar isOpen = {isOpen} setIsOpen={setIsOpen} />
-       <Navbar setIsOpen = {setIsOpen} />
+       <Sidebar isOpen = {isOpen} toggleMobileMenu={toggleMobileMenu} />
+       <Navbar toggleMobileMenu = {toggleMobileMenu} />
     </>
   )
 }
