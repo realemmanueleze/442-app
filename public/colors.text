@@ -1,0 +1,72 @@
+/* CSS HEX */
+--blue-munsell: #0285A3; - btn and primary
+-- whitesmoke: #f5f5f5; - primary
+--morning-blue: #8EA09Eff; - logo $ primary color 
+
+--steel-teal: #4A919Bff;
+--silver-chalice: #AEADA5ff;
+--black-olive: #3F4138ff;
+
+/* CSV */
+0285A3,2E4243,91ACB2,0D6274,040A0C
+
+/* With # */
+#0285A3, #2E4243, #91ACB2, #0D6274, #040A0C
+
+/* Array */
+["0285A3","2E4243","91ACB2","0D6274","040A0C"]
+
+/* Object */
+{"Blue Munsell":"0285A3","Outer Space Crayola":"2E4243","Pewter Blue":"91ACB2","Blue Sapphire":"0D6274","Rich Black FOGRA 39":"040A0C"}
+
+/* Extended Array */
+[{"name":"Blue Munsell","hex":"0285A3","rgb":[2,133,163],"cmyk":[99,18,0,36],"hsb":[191,99,64],"hsl":[191,98,32],"lab":[51,-19,-24]},{"name":"Outer Space Crayola","hex":"2E4243","rgb":[46,66,67],"cmyk":[31,1,0,74],"hsb":[183,31,26],"hsl":[183,19,22],"lab":[26,-8,-3]},{"name":"Pewter Blue","hex":"91ACB2","rgb":[145,172,178],"cmyk":[19,3,0,30],"hsb":[191,19,70],"hsl":[191,18,63],"lab":[69,-8,-6]},{"name":"Blue Sapphire","hex":"0D6274","rgb":[13,98,116],"cmyk":[89,16,0,55],"hsb":[190,89,45],"hsl":[190,80,25],"lab":[38,-16,-17]},{"name":"Rich Black FOGRA 39","hex":"040A0C","rgb":[4,10,12],"cmyk":[67,17,0,95],"hsb":[195,67,5],"hsl":[195,50,3],"lab":[2,-1,-1]}]
+
+/* XML */
+<palette>
+  <color name="Blue Munsell" hex="0285A3" r="2" g="133" b="163" />
+  <color name="Outer Space Crayola" hex="2E4243" r="46" g="66" b="67" />
+  <color name="Pewter Blue" hex="91ACB2" r="145" g="172" b="178" />
+  <color name="Blue Sapphire" hex="0D6274" r="13" g="98" b="116" />
+  <color name="Rich Black FOGRA 39" hex="040A0C" r="4" g="10" b="12" />
+</palette>
+
+
+/* CSS HSL */
+--blue-munsell: hsla(190, 62%, 43%, 1);
+--silver-chalice: hsla(53, 5%, 66%, 1);
+--morning-blue: hsla(173, 9%, 59%, 1);
+--steel-teal: hsla(187, 35%, 45%, 1);
+--black-olive: hsla(73, 7%, 24%, 1);
+
+/* SCSS HEX */
+$blue-munsell: #2999B0ff;
+$silver-chalice: #AEADA5ff;
+$morning-blue: #8EA09Eff;
+$steel-teal: #4A919Bff;
+$black-olive: #3F4138ff;
+
+/* SCSS HSL */
+$blue-munsell: hsla(190, 62%, 43%, 1);
+$silver-chalice: hsla(53, 5%, 66%, 1);
+$morning-blue: hsla(173, 9%, 59%, 1);
+$steel-teal: hsla(187, 35%, 45%, 1);
+$black-olive: hsla(73, 7%, 24%, 1);
+
+/* SCSS RGB */
+$blue-munsell: rgba(41, 153, 176, 1);
+$silver-chalice: rgba(174, 173, 165, 1);
+$morning-blue: rgba(142, 160, 158, 1);
+$steel-teal: rgba(74, 145, 155, 1);
+$black-olive: rgba(63, 65, 56, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-right: linear-gradient(90deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-bottom: linear-gradient(180deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-left: linear-gradient(270deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-top-right: linear-gradient(45deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-bottom-right: linear-gradient(135deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-top-left: linear-gradient(225deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-bottom-left: linear-gradient(315deg, #2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);
+$gradient-radial: radial-gradient(#2999B0ff, #AEADA5ff, #8EA09Eff, #4A919Bff, #3F4138ff);

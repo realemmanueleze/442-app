@@ -29,7 +29,7 @@ export const $NavbarContainer = styled.div`
 `;
 
 export const $NavLogo = styled(LinkRouter)`
-  color: #fff;
+  color: #8EA09Eff;
   display: flex;
   justify-self: start;
   cursor: pointer;
@@ -72,16 +72,18 @@ export const $NavItem = styled.li`
 `;
 
 export const $NAvLinks = styled(LinkScroll)`
-  color: #fff;
+  color: #f5f5f5;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  border-bottom: 3px solid transparent;
 
-  &.active {
-    border-bottom: 3px solid #01bf71;
+  &.active, &:hover {
+    border-bottom: 3px solid #2999B0ff;
+    color: #0285A3;
   }
 `;
 
@@ -95,7 +97,7 @@ export const $NavBtn = styled.div`
 `;
 export const $NavBtnLink = styled(LinkRouter)`
     border-radius: 50px;
-    background-color: #01bf71;
+    background-color: #0285A3;
     white-space: nowrap;
     padding: 10px 22px;
     font-size: 16px;
@@ -104,10 +106,11 @@ export const $NavBtnLink = styled(LinkRouter)`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    color: #f5f5f5;
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #010606;
+        background: #f5f5f5;
+        color: #0285A3;
     }
 `;

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Hero from '../components/Hero';
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 
@@ -11,6 +12,7 @@ function Home() {
     <>
        <Sidebar isOpen = {isOpen} toggleMobileMenu={toggleMobileMenu} />
        <Navbar toggleMobileMenu = {toggleMobileMenu} />
+       <Hero />
     </>
   )
 }

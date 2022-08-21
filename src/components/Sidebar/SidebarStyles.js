@@ -56,11 +56,11 @@ export const $SidebarLink = styled(LinkScroll)`
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
     cursor: pointer;
 
     &:hover {
-        color: #01bf71;
+        color: #0285A3;
         transition: 0.2s ease-in-out;
 
    }
@@ -73,10 +73,10 @@ export const $SidebarBtnWrapper = styled.div`
 
 export const $SidebarRoute = styled(LinkRouter)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #0285A3;
     white-space: nowrap;
     padding: 16px 64px;
-    color: #010606;
+    color: #f5f5f5;
     font-size: 16px;
     outline: none;
     border: none;
@@ -86,8 +86,8 @@ export const $SidebarRoute = styled(LinkRouter)`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #010606;
+        background: #f5f5f5;
+        color: #0285A3;
     }
 `
 
