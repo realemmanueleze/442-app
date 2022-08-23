@@ -27,7 +27,6 @@ export function Info({
   buttonLabel,
   img,
   alt,
-  darkText,
 }) {
   return (
     <$InfoContainer lightBg={lightBg} id={id}>
@@ -73,7 +72,6 @@ Info.propTypes = {
   topLine: PropTypes.string.isRequired,
   headline: PropTypes.string.isRequired,
   lightText: PropTypes.bool.isRequired,
-  darkText: PropTypes.bool.isRequired,
   description: PropTypes.string.isRequired,
   buttonLabel: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,

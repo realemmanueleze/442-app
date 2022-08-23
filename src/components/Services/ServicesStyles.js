@@ -16,7 +16,16 @@ export const $ServicesContainer = styled.div`
   }
 `;
 
-export const $SectionTitle = styled.h2``;
+export const $SectionTitle = styled.h2`
+  font-size: 3rem;
+  color: #f5f5f5;
+  margin-bottom: 64px;
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+`;
 
 export const $ServicesWrapper = styled.div`
   max-width: 1000px;
@@ -30,11 +39,13 @@ export const $ServicesWrapper = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
+    transition: all 0.2s ease-in-out;
   }
 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
+    transition: all 0.2s ease-in-out;
   }
 `;
 
@@ -65,7 +76,6 @@ export const $Icon = styled.img`
 export const $Heading = styled.h3`
   font-size: 1.5rem;
   color: #f5f5f5;
-  margin-bottom: 34px;
 
   @media (max-width: 480px) {
     font-size: 2rem;
