@@ -15,17 +15,8 @@ import {
   $Img,
 } from './InfoStyles';
 import { $Button } from '../Button';
-import { infoData } from './Data';
 
-function Info() {
-  const infoDataEl = infoData.map((data) => {
-    return <InfoElements key={data.id} {...data} />;
-  });
-
-  return infoDataEl;
-}
-
-export function InfoElements({
+export function Info({
   lightBg,
   id,
   imgStart,
@@ -46,7 +37,7 @@ export function InfoElements({
             <$TextWrapper>
               <$TopLine>{topLine}</$TopLine>
               <$Heading lightText={lightText}>{headline}</$Heading>
-              <$Subtitle darkText={darkText}>{description}</$Subtitle>
+              <$Subtitle lightText>{description}</$Subtitle>
               <$BtnWrapper>
                 <$Button
                   to="home"
@@ -75,8 +66,7 @@ export function InfoElements({
   );
 }
 
-InfoElements.propTypes = {
-  // data: PropTypes.object.isRequired,
+Info.propTypes = {
   lightBg: PropTypes.bool.isRequired,
   id: PropTypes.string.isRequired,
   imgStart: PropTypes.bool.isRequired,
