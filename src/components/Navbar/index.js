@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 import PropTypes from 'prop-types';
 import {
   $Nav,
@@ -14,25 +15,80 @@ import {
 } from './NavbarStyles';
 
 export default function Navbar({ toggleMobileMenu }) {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const navEffectOnScroll = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', navEffectOnScroll);
+  }, []);
+
   return (
-    <$Nav>
+    <$Nav scrollNav={scrollNav}>
       <$NavbarContainer>
-        <$NavLogo to="/">442</$NavLogo>
+        <$NavLogo to="/" onClick={() => scroll.scrollToTop()}>
+          442
+        </$NavLogo>
         <$MobileMenuIcon onClick={toggleMobileMenu}>
           <FaBars />
         </$MobileMenuIcon>
         <$NavMenu>
           <$NavItem>
-            <$NAvLinks to="about">About</$NAvLinks>
+            <$NAvLinks
+              to="about"
+              smooth
+              duration={500}
+              spy
+              exact="true"
+              offset={-80}
+              activeClass="active"
+            >
+              About
+            </$NAvLinks>
           </$NavItem>
           <$NavItem>
-            <$NAvLinks to="discover">Discover</$NAvLinks>
+            <$NAvLinks
+              to="discover"
+              smooth
+              duration={500}
+              spy
+              exact="true"
+              offset={-80}
+              activeClass="active"
+            >
+              Discover
+            </$NAvLinks>
           </$NavItem>
           <$NavItem>
-            <$NAvLinks to="services">Services</$NAvLinks>
+            <$NAvLinks
+              to="services"
+              smooth
+              duration={500}
+              spy
+              exact="true"
+              offset={-80}
+              activeClass="active"
+            >
+              Services
+            </$NAvLinks>
           </$NavItem>
           <$NavItem>
-            <$NAvLinks to="signup">Sign Up</$NAvLinks>
+            <$NAvLinks
+              to="signup"
+              smooth
+              duration={500}
+              spy
+              exact="true"
+              offset={-80}
+              activeClass="active"
+            >
+              Sign Up
+            </$NAvLinks>
           </$NavItem>
         </$NavMenu>
         <$NavBtn>

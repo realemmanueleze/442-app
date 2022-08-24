@@ -3,7 +3,7 @@ import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const $Nav = styled.nav`
-  background-color: #000;
+  background-color: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   margin: -80px auto 0 auto;
   display: flex;
@@ -82,7 +82,10 @@ export const $NAvLinks = styled(LinkScroll)`
   cursor: pointer;
   border-bottom: 3px solid transparent;
 
-  &:active,
+  &.active {
+    border-bottom: 3px solid #2999b0ff;
+  }
+
   &:hover {
     border-bottom: 3px solid #2999b0ff;
     color: #4a919b;

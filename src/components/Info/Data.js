@@ -33,7 +33,7 @@ export const info2 = {
 };
 
 export const info3 = {
-  id: 'discover',
+  id: 'signup',
   lightBg: false,
   lightText: true,
   topLine: 'Members Only',

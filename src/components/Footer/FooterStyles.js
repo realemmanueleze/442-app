@@ -61,7 +61,53 @@ export const $FooterLink = styled(Link)`
   font-size: 14px;
 
   &:hover {
-    color: #01bf71;
+    color: #4a919b;
     transition: 0.3 ease-out;
   }
+`;
+
+export const $SocialMedia = styled.div`
+  max-width: 100%;
+  width: 100%;
+`;
+
+export const $SocialMediaWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+  }
+`;
+
+export const $WebsiteRights = styled.p`
+  color: #fff;
+  margin-bottom: 16px;
+`;
+
+export const $SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+export const $SocialLogo = styled(Link)`
+  color: #fff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+`;
+
+export const $SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 24px;
 `;
