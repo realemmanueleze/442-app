@@ -6,7 +6,7 @@ export const info1 = {
   headline: 'Gain access to insane opportunities',
   description:
     'Break into a circle of professionals dedicted to personal growth and supporting one another to win',
-  buttonLabel: 'Get started',
+  buttonLabel: 'Learn more',
   imgStart: false,
   img: '/images/svg-1.svg',
   alt: 'Group',
@@ -23,7 +23,7 @@ export const info2 = {
   headline: 'Gain access to insane opportunities',
   description:
     'Break into a circle of professionals dedicted to personal growth and supporting one another to win',
-  buttonLabel: 'Get started',
+  buttonLabel: 'Learn more',
   imgStart: true,
   img: '../../images/svg-2.svg',
   alt: 'Car',
