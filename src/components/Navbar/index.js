@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 import PropTypes from 'prop-types';
+import { useNavbarContext } from 'components/NavContext';
+
 import {
   $Nav,
   $NavbarContainer,
@@ -16,6 +18,7 @@ import {
 
 export default function Navbar({ toggleMobileMenu }) {
   const [scrollNav, setScrollNav] = useState(false);
+  const { hideNav, toggleNav } = useNavbarContext();
 
   const navEffectOnScroll = () => {
     if (window.scrollY >= 80) {
@@ -24,12 +27,13 @@ export default function Navbar({ toggleMobileMenu }) {
       setScrollNav(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener('scroll', navEffectOnScroll);
   }, []);
 
   return (
-    <$Nav scrollNav={scrollNav}>
+    <$Nav scrollNav={scrollNav} hideNav={hideNav}>
       <$NavbarContainer>
         <$NavLogo to="/" onClick={() => scroll.scrollToTop()}>
           442
@@ -92,7 +96,9 @@ export default function Navbar({ toggleMobileMenu }) {
           </$NavItem>
         </$NavMenu>
         <$NavBtn>
-          <$NavBtnLink to="/signin">Sign In</$NavBtnLink>
+          <$NavBtnLink to="/signin" onClick={toggleNav}>
+            Sign In
+          </$NavBtnLink>
         </$NavBtn>
       </$NavbarContainer>
     </$Nav>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { NavContext } from 'components/NavContext';
 import {
   $SidebarContainer,
   $Icon,
@@ -12,8 +13,13 @@ import {
 } from './SidebarStyles';
 
 function Sidebar({ toggleMobileMenu, isOpen }) {
+  const { hideNav, toggleNav } = useContext(NavContext);
   return (
-    <$SidebarContainer isOpen={isOpen} onClick={toggleMobileMenu}>
+    <$SidebarContainer
+      isOpen={isOpen}
+      onClick={toggleMobileMenu}
+      hideNav={hideNav}
+    >
       <$Icon>
         <$CloseIcon onClick={toggleMobileMenu} />
       </$Icon>
@@ -33,7 +39,7 @@ function Sidebar({ toggleMobileMenu, isOpen }) {
           </$SidebarLink>
         </$SidebarMenu>
         <$SidebarBtnWrapper>
-          <$SidebarRoute to="/" onClick={toggleMobileMenu}>
+          <$SidebarRoute to="/signin" onClick={(toggleMobileMenu, toggleNav)}>
             Sign In
           </$SidebarRoute>
         </$SidebarBtnWrapper>

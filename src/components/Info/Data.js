@@ -17,15 +17,15 @@ export const info1 = {
 
 export const info2 = {
   id: 'discover',
-  lightBg: false,
-  lightText: true,
+  lightBg: true,
+  lightText: false,
   topLine: 'Members Only',
   headline: 'Gain access to insane opportunities',
   description:
     'Break into a circle of professionals dedicted to personal growth and supporting one another to win',
   buttonLabel: 'Get started',
   imgStart: true,
-  img: '../../images/svg-1.svg',
+  img: '../../images/svg-2.svg',
   alt: 'Car',
   dark: true,
   primary: true,
@@ -41,8 +41,8 @@ export const info3 = {
   description:
     'Break into a circle of professionals dedicted to personal growth and supporting one another to win',
   buttonLabel: 'Get started',
-  imgStart: true,
-  img: '../../images/svg-1.svg',
+  imgStart: false,
+  img: '../../images/svg-3.svg',
   alt: 'Car',
   dark: true,
   primary: true,

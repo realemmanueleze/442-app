@@ -50,7 +50,7 @@ export const $ServicesWrapper = styled.div`
 `;
 
 export const $ServiceCard = styled.div`
-  background: #fff;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,8 +74,9 @@ export const $Icon = styled.img`
 `;
 
 export const $Heading = styled.h3`
-  font-size: 1.5rem;
-  color: #f5f5f5;
+  font-size: 1.3rem;
+  color: #010606;
+  margin-bottom: 10px;
 
   @media (max-width: 480px) {
     font-size: 2rem;

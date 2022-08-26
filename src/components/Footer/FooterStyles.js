@@ -96,7 +96,7 @@ export const $SocialIcons = styled.div`
 `;
 
 export const $SocialLogo = styled(Link)`
-  color: #fff;
+  color: #8ea09e;
   justify-self: start;
   cursor: pointer;
   text-decoration: none;

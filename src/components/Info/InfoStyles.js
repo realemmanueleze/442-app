@@ -79,7 +79,7 @@ export const $Subtitle = styled.p`
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ lightText }) => (lightText ? '#f5f5f5' : '#010606')};
+  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
 `;
 
 export const $BtnWrapper = styled.div`

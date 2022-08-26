@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 
 export const $SidebarContainer = styled.aside`
   position: fixed;
-  display: grid;
+  display: ${({ hideNav }) => (hideNav ? 'none' : 'grid')};
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   left: 0;
   width: 100%;

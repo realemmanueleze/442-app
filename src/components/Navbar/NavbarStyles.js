@@ -6,7 +6,7 @@ export const $Nav = styled.nav`
   background-color: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   margin: -80px auto 0 auto;
-  display: flex;
+  display: ${({ hideNav }) => (hideNav ? 'none' : 'flex')};
   align-items: center;
   justify-content: center;
   font-size: 1rem;

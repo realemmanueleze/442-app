@@ -11,7 +11,7 @@ export const ServicesData = [
     id: 2,
     icon: '/images/icon-2.svg',
     alt: 'joint investment',
-    heading: 'This is the second one',
+    heading: 'This is the 2nd one',
     subheading: 'This is the subheading',
     body: 'This is the body',
   },

@@ -1,11 +1,12 @@
 import React from 'react';
 import SigninForm from 'components/SigninForm';
+import NavContextProvider from 'components/NavContext';
 
 function SigninPage() {
   return (
-    <div>
-      <SigninForm />;
-    </div>
+    <NavContextProvider>
+      <SigninForm />
+    </NavContextProvider>
   );
 }
 

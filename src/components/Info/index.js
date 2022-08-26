@@ -36,7 +36,7 @@ export function Info({
             <$TextWrapper>
               <$TopLine>{topLine}</$TopLine>
               <$Heading lightText={lightText}>{headline}</$Heading>
-              <$Subtitle lightText>{description}</$Subtitle>
+              <$Subtitle lightText={lightText}>{description}</$Subtitle>
               <$BtnWrapper>
                 <$Button
                   to="home"
@@ -45,7 +45,7 @@ export function Info({
                   spy
                   offset={-80}
                   primary
-                  dark
+                  light
                   exact
                 >
                   {buttonLabel}

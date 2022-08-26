@@ -8,7 +8,7 @@ export const $Container = styled.div`
   left: 0;
   right: 0;
   top: 0;
-  z-index: 10000;
+  z-index: 0;
   overflow: hidden;
   background: #0285a3;
   /* background: linear-gradient(
@@ -37,6 +37,7 @@ export const $Icon = styled(Link)`
   font-weight: 700;
   font-size: 32px;
   cursor: pointer;
+  width: fit-content;
 
   @media (max-width: 480px) {
     margin-left: 16px;
