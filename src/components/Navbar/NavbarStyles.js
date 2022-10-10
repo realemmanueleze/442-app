@@ -6,7 +6,8 @@ export const $Nav = styled.nav`
   background-color: ${({ scrollNav }) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   margin: -80px auto 0 auto;
-  display: ${({ hideNav }) => (hideNav ? 'none' : 'flex')};
+  display: ${({ navIsOpen }) => (navIsOpen ? 'flex' : 'none')};
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   font-size: 1rem;
@@ -100,6 +101,7 @@ export const $NavBtn = styled.div`
     display: none;
   } ;
 `;
+
 export const $NavBtnLink = styled(LinkRouter)`
   border-radius: 50px;
   background-color: #4a919b;

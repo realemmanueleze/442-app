@@ -35,7 +35,7 @@ function Hero() {
           onMouseEnter={btnHover}
           onMouseLeave={btnHover}
         >
-          Get Started {hover ? <$ArrowFoward hover /> : <$ArrowRight hover />}
+          Get Started {hover ? <$ArrowFoward /> : <$ArrowRight />}
         </$Button>
       </$BtnWrapper>
     </$HeroContainer>

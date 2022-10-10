@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 import PropTypes from 'prop-types';
-import { useNavbarContext } from 'components/NavContext';
 
+import { NavContext } from 'components/NavContext';
 import {
   $Nav,
   $NavbarContainer,
@@ -18,7 +18,8 @@ import {
 
 export default function Navbar({ toggleMobileMenu }) {
   const [scrollNav, setScrollNav] = useState(false);
-  const { hideNav, toggleNav } = useNavbarContext();
+  const { toggleNavIsOpen, navIsOpen } = useContext(NavContext);
+  console.log(navIsOpen);
 
   const navEffectOnScroll = () => {
     if (window.scrollY >= 80) {
@@ -33,7 +34,7 @@ export default function Navbar({ toggleMobileMenu }) {
   }, []);
 
   return (
-    <$Nav scrollNav={scrollNav} hideNav={hideNav}>
+    <$Nav scrollNav={scrollNav} navIsOpen={navIsOpen}>
       <$NavbarContainer>
         <$NavLogo to="/" onClick={() => scroll.scrollToTop()}>
           442
@@ -96,7 +97,7 @@ export default function Navbar({ toggleMobileMenu }) {
           </$NavItem>
         </$NavMenu>
         <$NavBtn>
-          <$NavBtnLink to="/signin" onClick={toggleNav}>
+          <$NavBtnLink to="/signin" onClick={toggleNavIsOpen}>
             Sign In
           </$NavBtnLink>
         </$NavBtn>
@@ -107,4 +108,6 @@ export default function Navbar({ toggleMobileMenu }) {
 
 Navbar.propTypes = {
   toggleMobileMenu: PropTypes.func.isRequired,
+  // toggleNavIsOpen: PropTypes.func.isRequired,
+  // navIsOpen: PropTypes.bool.isRequired,
 };

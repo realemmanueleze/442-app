@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { NavContext } from 'components/NavContext';
 import Navbar from './Navbar';
-import NavContextProvider from './NavContext';
 import Sidebar from './Sidebar';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const { navIsOpen, toggleNavIsOpen } = useContext(NavContext);
   const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
-    <NavContextProvider>
-      <Sidebar isOpen={isOpen} toggleMobileMenu={toggleMobileMenu} />
-      <Navbar toggleMobileMenu={toggleMobileMenu} />
-    </NavContextProvider>
+    <div>
+      <Sidebar
+        isOpen={isOpen}
+        toggleMobileMenu={toggleMobileMenu}
+        toggleNavIsOpen={toggleNavIsOpen}
+        navIsOpen={navIsOpen}
+      />
+      <Navbar
+        toggleMobileMenu={toggleMobileMenu}
+        toggleNavIsOpen={toggleNavIsOpen}
+        navIsOpen
+      />
+    </div>
   );
 }
 

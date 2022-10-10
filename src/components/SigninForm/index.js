@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavbarContext } from 'components/NavContext';
+import React, { useContext } from 'react';
+import { NavContext } from 'components/NavContext';
 import {
   $Container,
   $FormWrap,
@@ -14,12 +14,12 @@ import {
 } from './SigninFormStyles';
 
 function SigninForm() {
-  const { toggleNav } = useNavbarContext();
+  const { toggleNavIsOpen } = useContext(NavContext);
 
   return (
     <$Container>
       <$FormWrap>
-        <$Icon to="/" onClick={toggleNav}>
+        <$Icon to="/" onClick={toggleNavIsOpen}>
           442
         </$Icon>
         <$FormContent>
@@ -29,7 +29,7 @@ function SigninForm() {
             <$FormInput type="email" id="email-sign-in" required />
             <$FormLabel htmlFor="password-sign-in">Password</$FormLabel>
             <$FormInput type="email" id="password-sign-in" required />
-            <$FormButton type="submit" onClick={toggleNav}>
+            <$FormButton type="submit" onClick={toggleNavIsOpen}>
               Sign in
             </$FormButton>
             <$Text>Forgot password</$Text>

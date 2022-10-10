@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { NavContext } from 'components/NavContext';
@@ -13,12 +14,12 @@ import {
 } from './SidebarStyles';
 
 function Sidebar({ toggleMobileMenu, isOpen }) {
-  const { hideNav, toggleNav } = useContext(NavContext);
+  const { toggleNavIsOpen, navIsOpen } = useContext(NavContext);
   return (
     <$SidebarContainer
       isOpen={isOpen}
       onClick={toggleMobileMenu}
-      hideNav={hideNav}
+      navIsOpen={navIsOpen}
     >
       <$Icon>
         <$CloseIcon onClick={toggleMobileMenu} />
@@ -39,7 +40,10 @@ function Sidebar({ toggleMobileMenu, isOpen }) {
           </$SidebarLink>
         </$SidebarMenu>
         <$SidebarBtnWrapper>
-          <$SidebarRoute to="/signin" onClick={(toggleMobileMenu, toggleNav)}>
+          <$SidebarRoute
+            to="/signin"
+            onClick={(toggleMobileMenu, toggleNavIsOpen)}
+          >
             Sign In
           </$SidebarRoute>
         </$SidebarBtnWrapper>
@@ -51,5 +55,7 @@ function Sidebar({ toggleMobileMenu, isOpen }) {
 Sidebar.propTypes = {
   toggleMobileMenu: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  // toggleNavIsOpen: PropTypes.func.isRequired,
+  // navIsOpen: PropTypes.bool.isRequired,
 };
 export default Sidebar;

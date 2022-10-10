@@ -1,28 +1,28 @@
-import React, { useState, createContext, useContext } from 'react';
-import PropTypes, { element } from 'prop-types';
+/* eslint-disable react/jsx-no-constructed-context-values */
+import React, { useState, createContext } from 'react';
+import PropTypes from 'prop-types';
 
 export const NavContext = createContext();
 
-export function useNavbarContext() {
-  return useContext(NavContext);
-}
+// export const useNavbarContext = useContext(NavContext);
 
 function NavContextProvider({ children }) {
-  const [hideNav, setHideNav] = useState(false);
+  const [navIsOpen, setNavIsOpen] = useState(true);
+  // localStorage.setItem('navIsOpen', navIsOpen);
 
-  const toggleNav = () => {
-    setHideNav(true);
+  const togglenavIsOpen = () => {
+    setNavIsOpen((prev) => !prev);
   };
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <NavContext.Provider value={{ hideNav, toggleNav }}>
+    <NavContext.Provider value={{ navIsOpen, togglenavIsOpen, setNavIsOpen }}>
       {children}
     </NavContext.Provider>
   );
 }
 
 NavContextProvider.propTypes = {
-  children: PropTypes.objectOf(element).isRequired,
+  children: PropTypes.any.isRequired,
 };
 export default NavContextProvider;
