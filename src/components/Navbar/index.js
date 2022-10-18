@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
@@ -15,7 +14,6 @@ import {
   $NavBtnLink,
 } from './NavbarStyles';
 
-// eslint-disable-next-line react/prop-types
 export default function Navbar({
   toggleMobileMenu,
   navIsOpen,
@@ -109,7 +107,7 @@ export default function Navbar({
 }
 
 Navbar.propTypes = {
-  // setIsOpen: PropTypes.func.isRequired,
-  // toggleNavIsOpen: PropTypes.func.isRequired,
-  // navIsOpen: PropTypes.bool.isRequired,
+  toggleMobileMenu: PropTypes.func.isRequired,
+  toggleNavIsOpen: PropTypes.func.isRequired,
+  navIsOpen: PropTypes.bool.isRequired,
 };
