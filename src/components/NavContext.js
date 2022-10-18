@@ -9,13 +9,13 @@ export const NavContext = createContext();
 function NavContextProvider({ children }) {
   const [navIsOpen, setNavIsOpen] = useState(true);
 
-  const togglenavIsOpen = () => {
+  const toggleNavIsOpen = () => {
     setNavIsOpen((prev) => !prev);
   };
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <NavContext.Provider value={{ navIsOpen, togglenavIsOpen, setNavIsOpen }}>
+    <NavContext.Provider value={{ navIsOpen, toggleNavIsOpen, setNavIsOpen }}>
       {children}
     </NavContext.Provider>
   );
