@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { animateScroll as scroll } from 'react-scroll';
 import PropTypes from 'prop-types';
-
-import { NavContext } from 'components/NavContext';
 import {
   $Nav,
   $NavbarContainer,
@@ -16,10 +15,13 @@ import {
   $NavBtnLink,
 } from './NavbarStyles';
 
-export default function Navbar({ toggleMobileMenu }) {
+// eslint-disable-next-line react/prop-types
+export default function Navbar({
+  toggleMobileMenu,
+  navIsOpen,
+  toggleNavIsOpen,
+}) {
   const [scrollNav, setScrollNav] = useState(false);
-  const { toggleNavIsOpen, navIsOpen } = useContext(NavContext);
-  console.log(navIsOpen);
 
   const navEffectOnScroll = () => {
     if (window.scrollY >= 80) {
@@ -107,7 +109,7 @@ export default function Navbar({ toggleMobileMenu }) {
 }
 
 Navbar.propTypes = {
-  toggleMobileMenu: PropTypes.func.isRequired,
+  // setIsOpen: PropTypes.func.isRequired,
   // toggleNavIsOpen: PropTypes.func.isRequired,
   // navIsOpen: PropTypes.bool.isRequired,
 };

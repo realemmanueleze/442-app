@@ -13,18 +13,13 @@ import {
   $SidebarMenu,
 } from './SidebarStyles';
 
-function Sidebar({ toggleMobileMenu, isOpen }) {
-  const { toggleNavIsOpen, navIsOpen } = useContext(NavContext);
+function Sidebar({ toggleMobileMenu, isOpen, toggleNavIsOpen, navIsOpen }) {
   return (
-    <$SidebarContainer
-      isOpen={isOpen}
-      onClick={toggleMobileMenu}
-      navIsOpen={navIsOpen}
-    >
-      <$Icon>
-        <$CloseIcon onClick={toggleMobileMenu} />
+    <$SidebarContainer isOpen={isOpen} navIsOpen={navIsOpen}>
+      <$Icon onClick={toggleMobileMenu}>
+        <$CloseIcon />
       </$Icon>
-      <$SidebarWrapper>
+      <$SidebarWrapper onClick={toggleMobileMenu}>
         <$SidebarMenu>
           <$SidebarLink to="about" onClick={toggleMobileMenu}>
             About
@@ -53,9 +48,7 @@ function Sidebar({ toggleMobileMenu, isOpen }) {
 }
 
 Sidebar.propTypes = {
-  toggleMobileMenu: PropTypes.func.isRequired,
+  // setIsOpen: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  // toggleNavIsOpen: PropTypes.func.isRequired,
-  // navIsOpen: PropTypes.bool.isRequired,
 };
 export default Sidebar;

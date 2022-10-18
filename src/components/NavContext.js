@@ -8,7 +8,6 @@ export const NavContext = createContext();
 
 function NavContextProvider({ children }) {
   const [navIsOpen, setNavIsOpen] = useState(true);
-  // localStorage.setItem('navIsOpen', navIsOpen);
 
   const togglenavIsOpen = () => {
     setNavIsOpen((prev) => !prev);

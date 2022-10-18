@@ -5,7 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 
 export const $SidebarContainer = styled.aside`
   position: fixed;
-  display: ${({ navIsOpen }) => (navIsOpen ? 'grid' : 'none')};
+  display: ${({ isOpen }) => (isOpen ? 'grid' : 'none')};
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
   left: 0;
   width: 100%;
@@ -33,6 +33,7 @@ export const $Icon = styled.div`
 
 export const $SidebarWrapper = styled.div`
   color: #fff;
+  width: 100%;
 `;
 
 export const $SidebarMenu = styled.ul`

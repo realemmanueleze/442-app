@@ -7,7 +7,6 @@ export const $Nav = styled.nav`
   height: 80px;
   margin: -80px auto 0 auto;
   display: ${({ navIsOpen }) => (navIsOpen ? 'flex' : 'none')};
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   font-size: 1rem;
