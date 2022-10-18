@@ -20,8 +20,6 @@ export default function Navbar({
   toggleNavIsOpen,
 }) {
   const [scrollNav, setScrollNav] = useState(false);
-  console.log(navIsOpen);
-  console.log(toggleNavIsOpen);
 
   const navEffectOnScroll = () => {
     if (window.scrollY >= 80) {
