@@ -1,7 +1,5 @@
-/* eslint-disable react/prop-types */
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { NavContext } from 'components/NavContext';
 import {
   $SidebarContainer,
   $Icon,
@@ -48,7 +46,9 @@ function Sidebar({ toggleMobileMenu, isOpen, toggleNavIsOpen, navIsOpen }) {
 }
 
 Sidebar.propTypes = {
-  // setIsOpen: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  toggleMobileMenu: PropTypes.func.isRequired,
+  toggleNavIsOpen: PropTypes.func.isRequired,
+  navIsOpen: PropTypes.bool.isRequired,
 };
 export default Sidebar;
