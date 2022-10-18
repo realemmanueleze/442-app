@@ -9,7 +9,6 @@ function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsOpen((prev) => !prev);
-    console.log('clicked');
   };
 
   return (

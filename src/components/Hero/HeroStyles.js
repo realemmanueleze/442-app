@@ -52,6 +52,7 @@ export const $HeroH1 = styled.h1`
   color: white;
   font-size: 48px;
   text-align: center;
+  margin-bottom: 20px;
   z-index: 5;
 
   @media (max-width: 768px) {
