@@ -1,10 +1,13 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 export const NavContext = createContext();
+console.log(window.location.pathname);
 
 function NavContextProvider({ children }) {
   const [navIsOpen, setNavIsOpen] = useState(true);
+  const windowLocation = window.location.href;
+  console.log(windowLocation);
 
   const toggleNavIsOpen = () => {
     setNavIsOpen((prev) => !prev);

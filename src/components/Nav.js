@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-bind */
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import { NavContext } from './NavContext';
@@ -10,6 +10,9 @@ function Nav() {
   const toggleMobileMenu = () => {
     setIsOpen((prev) => !prev);
   };
+  useEffect(() => {
+    window.onpopstate = () => toggleNavIsOpen();
+  }, [window.onpopstate]);
 
   return (
     <>
