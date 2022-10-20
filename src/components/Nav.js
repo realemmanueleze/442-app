@@ -5,13 +5,17 @@ import Sidebar from './Sidebar';
 import { NavContext } from './NavContext';
 
 function Nav() {
-  const { toggleNavIsOpen, navIsOpen } = useContext(NavContext);
+  const { setNavIsOpen, toggleNavIsOpen, navIsOpen } = useContext(NavContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleMobileMenu = () => {
     setIsOpen((prev) => !prev);
   };
   useEffect(() => {
-    window.onpopstate = () => toggleNavIsOpen();
+    window.onpopstate = () => {
+      if (window.location.pathname === '/signin') {
+        setNavIsOpen(false);
+      } else setNavIsOpen(true);
+    };
   }, [window.onpopstate]);
 
   return (
